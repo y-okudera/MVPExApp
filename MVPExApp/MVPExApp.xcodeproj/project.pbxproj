@@ -99,13 +99,14 @@
 		6452E93923ECEBCB0072717A /* MVPExApp */ = {
 			isa = PBXGroup;
 			children = (
-				6452E93A23ECEBCB0072717A /* AppDelegate.swift */,
-				6452E93C23ECEBCB0072717A /* SceneDelegate.swift */,
-				6452E93E23ECEBCB0072717A /* ViewController.swift */,
-				6452E94023ECEBCB0072717A /* Main.storyboard */,
-				6452E94323ECEBCE0072717A /* Assets.xcassets */,
-				6452E94523ECEBCE0072717A /* LaunchScreen.storyboard */,
-				6452E94823ECEBCE0072717A /* Info.plist */,
+				6452E96E23ECEDF30072717A /* Application */,
+				6452E97023ECEE060072717A /* Contracts */,
+				6452E96A23ECEC250072717A /* Extensions */,
+				6452E96B23ECECF10072717A /* Models */,
+				6452E96D23ECECFA0072717A /* Presenters */,
+				6452E97123ECEE470072717A /* Resources */,
+				6452E96F23ECEDFD0072717A /* Utilities */,
+				6452E96C23ECECF60072717A /* Views */,
 			);
 			path = MVPExApp;
 			sourceTree = "<group>";
@@ -126,6 +127,69 @@
 				6452E95E23ECEBCF0072717A /* Info.plist */,
 			);
 			path = MVPExAppUITests;
+			sourceTree = "<group>";
+		};
+		6452E96A23ECEC250072717A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6452E96B23ECECF10072717A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6452E96C23ECECF60072717A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6452E94023ECEBCB0072717A /* Main.storyboard */,
+				6452E93E23ECEBCB0072717A /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6452E96D23ECECFA0072717A /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		6452E96E23ECEDF30072717A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6452E93A23ECEBCB0072717A /* AppDelegate.swift */,
+				6452E94823ECEBCE0072717A /* Info.plist */,
+				6452E94523ECEBCE0072717A /* LaunchScreen.storyboard */,
+				6452E93C23ECEBCB0072717A /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6452E96F23ECEDFD0072717A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6452E97023ECEE060072717A /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		6452E97123ECEE470072717A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6452E94323ECEBCE0072717A /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,13 +499,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PCCZJUYRT6;
-				INFOPLIST_FILE = MVPExApp/Info.plist;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				INFOPLIST_FILE = MVPExApp/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.stv-tech.MVPExApp";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.yuoku.MVPExApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,13 +518,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PCCZJUYRT6;
-				INFOPLIST_FILE = MVPExApp/Info.plist;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				INFOPLIST_FILE = MVPExApp/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.stv-tech.MVPExApp";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.yuoku.MVPExApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
