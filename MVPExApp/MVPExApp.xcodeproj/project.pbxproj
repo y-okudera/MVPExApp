@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640ED87723F9A5FC004B6A4C /* LoginViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ED87623F9A5FC004B6A4C /* LoginViewMock.swift */; };
+		640ED87923F9A6BF004B6A4C /* LoginRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ED87823F9A6BF004B6A4C /* LoginRouterMock.swift */; };
+		640ED87B23F9A88F004B6A4C /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ED87A23F9A88F004B6A4C /* LoginPresenterTests.swift */; };
+		640ED87D23F9AD0D004B6A4C /* LoginModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ED87C23F9AD0D004B6A4C /* LoginModelMock.swift */; };
+		640ED87F23F9AE4A004B6A4C /* LoginModelOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ED87E23F9AE4A004B6A4C /* LoginModelOutputSpy.swift */; };
 		64142C8A23ED1D35002157EB /* JSONFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64142C8923ED1D35002157EB /* JSONFileReader.swift */; };
 		64142C8D23ED1D58002157EB /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64142C8C23ED1D58002157EB /* String+Path.swift */; };
 		64142C8F23ED1D89002157EB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64142C8E23ED1D89002157EB /* LoginResponse.swift */; };
@@ -21,7 +26,6 @@
 		6452E93D23ECEBCB0072717A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E93C23ECEBCB0072717A /* SceneDelegate.swift */; };
 		6452E94423ECEBCE0072717A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6452E94323ECEBCE0072717A /* Assets.xcassets */; };
 		6452E94723ECEBCE0072717A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6452E94523ECEBCE0072717A /* LaunchScreen.storyboard */; };
-		6452E95223ECEBCF0072717A /* MVPExAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E95123ECEBCF0072717A /* MVPExAppTests.swift */; };
 		6452E95D23ECEBCF0072717A /* MVPExAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E95C23ECEBCF0072717A /* MVPExAppUITests.swift */; };
 		6452E97323ECEF780072717A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452E97223ECEF780072717A /* LoginViewController.swift */; };
 		6452E97523ECEF820072717A /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6452E97423ECEF820072717A /* LoginViewController.storyboard */; };
@@ -55,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		640ED87623F9A5FC004B6A4C /* LoginViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewMock.swift; sourceTree = "<group>"; };
+		640ED87823F9A6BF004B6A4C /* LoginRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterMock.swift; sourceTree = "<group>"; };
+		640ED87A23F9A88F004B6A4C /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		640ED87C23F9AD0D004B6A4C /* LoginModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelMock.swift; sourceTree = "<group>"; };
+		640ED87E23F9AE4A004B6A4C /* LoginModelOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelOutputSpy.swift; sourceTree = "<group>"; };
 		64142C8923ED1D35002157EB /* JSONFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReader.swift; sourceTree = "<group>"; };
 		64142C8C23ED1D58002157EB /* String+Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
 		64142C8E23ED1D89002157EB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -72,7 +81,6 @@
 		6452E94623ECEBCE0072717A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6452E94823ECEBCE0072717A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6452E94D23ECEBCF0072717A /* MVPExAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPExAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6452E95123ECEBCF0072717A /* MVPExAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPExAppTests.swift; sourceTree = "<group>"; };
 		6452E95323ECEBCF0072717A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6452E95823ECEBCF0072717A /* MVPExAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPExAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6452E95C23ECEBCF0072717A /* MVPExAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPExAppUITests.swift; sourceTree = "<group>"; };
@@ -130,6 +138,26 @@
 				6452E97C23ECF88A0072717A /* LoginContract.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		640ED87423F9A5D1004B6A4C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				640ED87523F9A5DD004B6A4C /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		640ED87523F9A5DD004B6A4C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				640ED87C23F9AD0D004B6A4C /* LoginModelMock.swift */,
+				640ED87E23F9AE4A004B6A4C /* LoginModelOutputSpy.swift */,
+				640ED87A23F9A88F004B6A4C /* LoginPresenterTests.swift */,
+				640ED87823F9A6BF004B6A4C /* LoginRouterMock.swift */,
+				640ED87623F9A5FC004B6A4C /* LoginViewMock.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		64142C8B23ED1D4C002157EB /* Foundation */ = {
@@ -202,7 +230,7 @@
 		6452E95023ECEBCF0072717A /* MVPExAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				6452E95123ECEBCF0072717A /* MVPExAppTests.swift */,
+				640ED87423F9A5D1004B6A4C /* Modules */,
 				6452E95323ECEBCF0072717A /* Info.plist */,
 			);
 			path = MVPExAppTests;
@@ -517,7 +545,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6452E95223ECEBCF0072717A /* MVPExAppTests.swift in Sources */,
+				640ED87B23F9A88F004B6A4C /* LoginPresenterTests.swift in Sources */,
+				640ED87923F9A6BF004B6A4C /* LoginRouterMock.swift in Sources */,
+				640ED87723F9A5FC004B6A4C /* LoginViewMock.swift in Sources */,
+				640ED87F23F9AE4A004B6A4C /* LoginModelOutputSpy.swift in Sources */,
+				640ED87D23F9AD0D004B6A4C /* LoginModelMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
