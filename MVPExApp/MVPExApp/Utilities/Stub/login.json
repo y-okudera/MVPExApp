@@ -1,0 +1,9 @@
+{
+    "result": "OK",
+    "user_data": {
+    	"user_id": "11922911",
+    	"user_name": "Test User1",
+    	"session_token": "1234567890987654321",
+    	"last_login_date": "2020/02/01 12:30:05"    	
+    }
+}
