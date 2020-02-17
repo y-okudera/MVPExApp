@@ -20,6 +20,7 @@ final class LoginRouter {
 
         let loginView: LoginViewController = .instantiate()
 
+        // ローカルのJSONファイルから情報を取得する場合は、ここをMockに変更するだけ
         let loginModel: LoginModelInput = LoginModel()
 //        let loginModel: LoginModelInput = LoginModelMock()
 

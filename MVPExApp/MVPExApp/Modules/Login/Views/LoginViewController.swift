@@ -18,11 +18,6 @@ final class LoginViewController: UIViewController {
         print(debug: "")
     }
 
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        hideIndicatorAlert()
-//    }
-
     @IBAction private func tappedLoginButton(_ sender: UIButton) {
         presenter.tappedLoginButton(userId: "user_id", password: "password")
     }
