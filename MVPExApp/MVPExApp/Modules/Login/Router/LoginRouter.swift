@@ -16,7 +16,7 @@ final class LoginRouter {
         self.viewController = viewController
     }
 
-    static func assembleModules() -> UIViewController {
+    class func assembleModules() -> UIViewController {
 
         let loginView: LoginViewController = .instantiate()
 

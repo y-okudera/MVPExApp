@@ -16,7 +16,7 @@ final class MyPageRouter {
         self.viewController = viewController
     }
 
-    static func assembleModules() -> UIViewController {
+    class func assembleModules() -> UIViewController {
 
         let view: MyPageViewController = .instantiate()
 
