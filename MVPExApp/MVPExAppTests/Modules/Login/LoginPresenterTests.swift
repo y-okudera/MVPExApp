@@ -16,12 +16,13 @@ class LoginPresenterTests: XCTestCase {
     var router: LoginRouterMock?
     var presenter: LoginPresenter?
 
-    var outputSpy = LoginModelOutputSpy()
+    var outputSpy: LoginModelOutputSpy?
 
     override func setUp() {
         
         router = LoginRouterMock(viewController: view)
         presenter = LoginPresenter(view: view, model: model, router: router!)
+        outputSpy = .init(view: view, model: model)
 
         view.presenter = presenter
         model.output = outputSpy
@@ -34,7 +35,7 @@ class LoginPresenterTests: XCTestCase {
     func testLogin() {
         let expect = expectation(description: "login test")
 
-        outputSpy.expectation = expect
+        outputSpy?.expectation = expect
 
         // execute
         view.tappedLoginButton()

@@ -20,14 +20,14 @@ final class LoginViewMock: UIViewController, LoginView {
 
     func tappedLoginButton() {
         self.tappedLoginButton_call_count += 1
-        presenter.tappedLoginButton(userId: "", password: "")
+        presenter.tappedLoginButton(userNameOrMail: "", password: "")
     }
 
     func showIndicator() {
         self.showIndicator_call_count += 1
     }
 
-    func hideIndicator() {
+    func hideIndicator(completion: (() -> Void)?) {
         self.hideIndicator_call_count += 1
     }
 

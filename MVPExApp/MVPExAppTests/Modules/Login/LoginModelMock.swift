@@ -17,8 +17,12 @@ final class LoginModelMock {
 
 extension LoginModelMock: LoginModelInput {
 
+    func confirmUserNameAndPassword(userNameOrMail: String, password: String) {
+        self.output?.confirmResult(result: .success(userNameOrMail: userNameOrMail, password: password))
+    }
+    
     /// Bundle内のlogin.json読み込み
-    func requestLogin(userId: String, password: String) {
+    func requestLogin(userNameOrMail: String, password: String) {
         
         requestLogin_call_count += 1
         
