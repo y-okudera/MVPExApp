@@ -41,8 +41,9 @@ extension LoginPresenter: LoginModelOutput {
             print(debug: "ログイン成功")
             dump(debug: response)
             DispatchQueue.mainSyncSafe {
-                view?.hideIndicator()
-                router.showMyPage()
+                view?.hideIndicator { [weak self] in
+                    self?.router.showMyPage()
+                }
             }
             
         case .failure(let error):

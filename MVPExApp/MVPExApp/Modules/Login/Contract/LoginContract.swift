@@ -15,7 +15,7 @@ import Foundation
 /// ビューへの更新依頼を定義
 protocol LoginView: class {
     func showIndicator()
-    func hideIndicator()
+    func hideIndicator(completion: (() -> Void)?)
     func showAlert(title: String, message: String)
 }
 

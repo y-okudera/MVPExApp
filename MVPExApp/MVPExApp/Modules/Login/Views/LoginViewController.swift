@@ -29,8 +29,8 @@ extension LoginViewController: LoginView {
         showIndicatorAlert(message: "ログイン中")
     }
 
-    func hideIndicator() {
-        hideIndicatorAlert()
+    func hideIndicator(completion: (() -> Void)?) {
+        hideIndicatorAlert(completion: completion)
     }
     
     func showAlert(title: String, message: String) {
