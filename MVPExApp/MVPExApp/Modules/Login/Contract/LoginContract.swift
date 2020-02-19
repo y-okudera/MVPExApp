@@ -23,7 +23,7 @@ protocol LoginView: class {
 ///
 /// プレゼンターへの処理依頼を定義
 protocol LoginPresentable {
-    func tappedLoginButton(userId: String, password: String)
+    func tappedLoginButton(userNameOrMail: String, password: String)
 }
 
 /// Presenter -> Model
@@ -31,13 +31,15 @@ protocol LoginPresentable {
 /// モデルへの処理依頼を定義
 protocol LoginModelInput: class {
     var output: LoginModelOutput? { get set }
-    func requestLogin(userId: String, password: String)
+    func confirmUserNameAndPassword(userNameOrMail: String, password: String)
+    func requestLogin(userNameOrMail: String, password: String)
 }
 
 /// Model -> Presenter
 ///
 /// プレゼンターへの処理結果通知を定義
 protocol LoginModelOutput: class {
+    func confirmResult(result: LoginInputResult)
     func loginResult(result: LoginResult)
 }
 

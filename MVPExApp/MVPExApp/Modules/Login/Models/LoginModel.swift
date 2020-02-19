@@ -8,6 +8,34 @@
 
 import Foundation
 
+/// ログイン入力エラー
+enum LoginInputError: Error {
+    case userNameOrMailIsEmpty
+    case userNameOrMailIsInvalid
+    case passwordIsEmpty
+    case passwordIsInvalid
+
+    var message: String {
+        switch self {
+        case .userNameOrMailIsEmpty:
+            return "ユーザー名が入力されていません。".localized
+        case .userNameOrMailIsInvalid:
+            return "ユーザー名は、半角英数記号で入力してください。".localized
+        case .passwordIsEmpty:
+            return "パスワードが入力されていません。".localized
+        case .passwordIsInvalid:
+            return "パスワードは、半角英数記号で入力してください。".localized
+        }
+    }
+}
+
+/// ログイン入力チェック結果
+enum LoginInputResult {
+    case success(userNameOrMail: String, password: String)
+    case failure(LoginInputError)
+}
+
+/// ログインエラー
 enum LoginError: Error {
     case invalidURL
     case clientError(urlError: URLError)
@@ -17,6 +45,7 @@ enum LoginError: Error {
     case error(Error)
 }
 
+/// ログイン結果
 enum LoginResult {
     case success(LoginResponse)
     case failure(LoginError)
@@ -28,8 +57,34 @@ final class LoginModel {
 
 extension LoginModel: LoginModelInput {
 
+    /// ログイン入力チェック
+    func confirmUserNameAndPassword(userNameOrMail: String, password: String) {
+
+        if userNameOrMail.isEmpty {
+            output?.confirmResult(result: .failure(.userNameOrMailIsEmpty))
+            return
+        }
+
+        if !userNameOrMail.isOnlyAlphanumericAndSymbols() {
+            output?.confirmResult(result: .failure(.userNameOrMailIsInvalid))
+            return
+        }
+
+        if password.isEmpty {
+            output?.confirmResult(result: .failure(.passwordIsEmpty))
+            return
+        }
+
+        if !password.isOnlyAlphanumericAndSymbols() {
+            output?.confirmResult(result: .failure(.passwordIsInvalid))
+            return
+        }
+
+        output?.confirmResult(result: .success(userNameOrMail: userNameOrMail, password: password))
+    }
+
     /// APIリクエスト
-    func requestLogin(userId: String, password: String) {
+    func requestLogin(userNameOrMail: String, password: String) {
 
         let baseURL = "https://5e197941cc623b00146787f3.mockapi.io/api/v1"
         let path = "/login"
@@ -104,8 +159,33 @@ final class LoginModelMock {
 
 extension LoginModelMock: LoginModelInput {
 
+    func confirmUserNameAndPassword(userNameOrMail: String, password: String) {
+
+        if userNameOrMail.isEmpty {
+            output?.confirmResult(result: .failure(.userNameOrMailIsEmpty))
+            return
+        }
+
+        if !userNameOrMail.isOnlyAlphanumericAndSymbols() {
+            output?.confirmResult(result: .failure(.userNameOrMailIsInvalid))
+            return
+        }
+
+        if password.isEmpty {
+            output?.confirmResult(result: .failure(.passwordIsEmpty))
+            return
+        }
+
+        if !password.isOnlyAlphanumericAndSymbols() {
+            output?.confirmResult(result: .failure(.passwordIsInvalid))
+            return
+        }
+
+        output?.confirmResult(result: .success(userNameOrMail: userNameOrMail, password: password))
+    }
+
     /// Bundle内のlogin.json読み込み
-    func requestLogin(userId: String, password: String) {
+    func requestLogin(userNameOrMail: String, password: String) {
 
         let loginResponse = JSONFileReader(jsonFileName: "login.json", decodeType: LoginResponse.self)
 

@@ -10,23 +10,38 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
+    @IBOutlet private weak var userNameOrMailField: UITextField!
+    @IBOutlet private weak var passwordField: UITextField!
+    
     // クラスではなく、プロトコルを指定
     var presenter: LoginPresentable!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(debug: "")
+
+        let colors = [UIColor.systemTeal.withAlphaComponent(0.5),
+                      UIColor.systemPurple.withAlphaComponent(0.25),
+                      UIColor.systemPink.withAlphaComponent(0.5)].map { $0.cgColor }
+        self.view.gradient(colors: colors)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     @IBAction private func tappedLoginButton(_ sender: UIButton) {
-        presenter.tappedLoginButton(userId: "user_id", password: "password")
+        let userNameOrMail = userNameOrMailField.text ?? ""
+        let password = passwordField.text ?? ""
+        presenter.tappedLoginButton(userNameOrMail: userNameOrMail, password: password)
     }
 }
 
 extension LoginViewController: LoginView {
     
     func showIndicator() {
-        showIndicatorAlert(message: "ログイン中")
+        showIndicatorAlert(message: "ログイン中".localized)
     }
 
     func hideIndicator(completion: (() -> Void)?) {

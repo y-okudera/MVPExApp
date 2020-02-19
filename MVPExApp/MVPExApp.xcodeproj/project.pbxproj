@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6404D57E23FC38B50069F9F0 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404D57D23FC38B50069F9F0 /* UIView+Gradient.swift */; };
+		6404D58023FC3DE90069F9F0 /* UIColor+Plus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404D57F23FC3DE90069F9F0 /* UIColor+Plus.swift */; };
 		640ED87723F9A5FC004B6A4C /* LoginViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ED87623F9A5FC004B6A4C /* LoginViewMock.swift */; };
 		640ED87923F9A6BF004B6A4C /* LoginRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ED87823F9A6BF004B6A4C /* LoginRouterMock.swift */; };
 		640ED87B23F9A88F004B6A4C /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640ED87A23F9A88F004B6A4C /* LoginPresenterTests.swift */; };
@@ -39,6 +41,9 @@
 		647696C623F9972300C9A627 /* MyPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647696C523F9972300C9A627 /* MyPagePresenter.swift */; };
 		647696C923F997D000C9A627 /* MyPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647696C823F997D000C9A627 /* MyPageModel.swift */; };
 		647696CD23F9983400C9A627 /* MyPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647696CC23F9983400C9A627 /* MyPageRouter.swift */; };
+		64F8D52B23FD999E006BA209 /* String+RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F8D52A23FD999E006BA209 /* String+RegularExpression.swift */; };
+		64F8D52D23FDACAF006BA209 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64F8D52C23FDACAF006BA209 /* Localizable.strings */; };
+		64F8D52F23FDAD7B006BA209 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F8D52E23FDAD7B006BA209 /* String+Localized.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6404D57D23FC38B50069F9F0 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		6404D57F23FC3DE90069F9F0 /* UIColor+Plus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Plus.swift"; sourceTree = "<group>"; };
 		640ED87623F9A5FC004B6A4C /* LoginViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewMock.swift; sourceTree = "<group>"; };
 		640ED87823F9A6BF004B6A4C /* LoginRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterMock.swift; sourceTree = "<group>"; };
 		640ED87A23F9A88F004B6A4C /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
@@ -97,6 +104,9 @@
 		647696C523F9972300C9A627 /* MyPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPagePresenter.swift; sourceTree = "<group>"; };
 		647696C823F997D000C9A627 /* MyPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModel.swift; sourceTree = "<group>"; };
 		647696CC23F9983400C9A627 /* MyPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRouter.swift; sourceTree = "<group>"; };
+		64F8D52A23FD999E006BA209 /* String+RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RegularExpression.swift"; sourceTree = "<group>"; };
+		64F8D52C23FDACAF006BA209 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		64F8D52E23FDAD7B006BA209 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +173,9 @@
 		64142C8B23ED1D4C002157EB /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				64F8D52E23FDAD7B006BA209 /* String+Localized.swift */,
 				64142C8C23ED1D58002157EB /* String+Path.swift */,
+				64F8D52A23FD999E006BA209 /* String+RegularExpression.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -181,6 +193,8 @@
 			children = (
 				64142C9423ED215E002157EB /* AppDelegate+FirstView.swift */,
 				64142C9523ED215E002157EB /* SceneDelegate+FirstView.swift */,
+				6404D57F23FC3DE90069F9F0 /* UIColor+Plus.swift */,
+				6404D57D23FC38B50069F9F0 /* UIView+Gradient.swift */,
 				6435DF2C23F50821004AC760 /* UIViewController+IndicatorAlert.swift */,
 				64142C9823ED27E0002157EB /* UIViewController+Instantiate.swift */,
 			);
@@ -280,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				6452E94323ECEBCE0072717A /* Assets.xcassets */,
+				64F8D52C23FDACAF006BA209 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -489,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				647696BF23F98E6600C9A627 /* MyPageViewController.storyboard in Resources */,
+				64F8D52D23FDACAF006BA209 /* Localizable.strings in Resources */,
 				6452E97523ECEF820072717A /* LoginViewController.storyboard in Resources */,
 				6452E94723ECEBCE0072717A /* LaunchScreen.storyboard in Resources */,
 				6452E94423ECEBCE0072717A /* Assets.xcassets in Resources */,
@@ -517,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6404D57E23FC38B50069F9F0 /* UIView+Gradient.swift in Sources */,
 				6452E97B23ECF84D0072717A /* LoginModel.swift in Sources */,
 				6452E97D23ECF88A0072717A /* LoginContract.swift in Sources */,
 				64142C9723ED215E002157EB /* SceneDelegate+FirstView.swift in Sources */,
@@ -528,6 +545,9 @@
 				64142C9923ED27E0002157EB /* UIViewController+Instantiate.swift in Sources */,
 				647696C123F98EB600C9A627 /* MyPageContract.swift in Sources */,
 				6435DF3023F50B9A004AC760 /* DispatchQueue+MainSyncSafe.swift in Sources */,
+				6404D58023FC3DE90069F9F0 /* UIColor+Plus.swift in Sources */,
+				64F8D52B23FD999E006BA209 /* String+RegularExpression.swift in Sources */,
+				64F8D52F23FDAD7B006BA209 /* String+Localized.swift in Sources */,
 				64142C9623ED215E002157EB /* AppDelegate+FirstView.swift in Sources */,
 				64142C8D23ED1D58002157EB /* String+Path.swift in Sources */,
 				64142C8A23ED1D35002157EB /* JSONFileReader.swift in Sources */,

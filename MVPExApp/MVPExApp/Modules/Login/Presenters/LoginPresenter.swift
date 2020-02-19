@@ -25,14 +25,24 @@ final class LoginPresenter {
 
 // MARK: - ビューからの通知
 extension LoginPresenter: LoginPresentable {
-    func tappedLoginButton(userId: String, password: String) {
-        view?.showIndicator()
-        model.requestLogin(userId: userId, password: password)
+    func tappedLoginButton(userNameOrMail: String, password: String) {
+        model.confirmUserNameAndPassword(userNameOrMail: userNameOrMail, password: password)
     }
 }
 
 // MARK: - モデルからの通知
 extension LoginPresenter: LoginModelOutput {
+
+    func confirmResult(result: LoginInputResult) {
+
+        switch result {
+        case .success(let userNameOrMail, let password):
+            view?.showIndicator()
+            model.requestLogin(userNameOrMail: userNameOrMail, password: password)
+        case .failure(let error):
+            view?.showAlert(title: "", message: error.message)
+        }
+    }
     
     func loginResult(result: LoginResult) {
         
@@ -47,9 +57,9 @@ extension LoginPresenter: LoginModelOutput {
             }
             
         case .failure(let error):
-            print(debug: error)
+            print(debug: "ログイン失敗", error)
             DispatchQueue.mainSyncSafe {
-                view?.showAlert(title: "", message: "ログインに失敗しました。")
+                view?.showAlert(title: "", message: "ログインに失敗しました。".localized)
             }
         }
     }
