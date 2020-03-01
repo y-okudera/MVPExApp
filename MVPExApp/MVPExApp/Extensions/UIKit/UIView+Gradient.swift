@@ -8,6 +8,20 @@
 
 import UIKit
 
+var gradientLayerKey: UInt8 = 0
+
+extension UIView {
+
+    var gradientLayer: CAGradientLayer? {
+        get {
+            return (objc_getAssociatedObject(self, &gradientLayerKey) ?? 0) as? CAGradientLayer
+        }
+        set {
+            objc_setAssociatedObject(self, &gradientLayerKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+}
+
 extension UIView {
 
     /// グラデーション
@@ -20,11 +34,13 @@ extension UIView {
                   endPoint: CGPoint = CGPoint(x: 1.0, y: 1.0),
                   colors: [CGColor]) {
 
-        let gradient = CAGradientLayer()
-        gradient.frame = bounds
-        gradient.startPoint = startPoint
-        gradient.endPoint = endPoint
-        gradient.colors = colors
-        layer.insertSublayer(gradient, at: 0)
+        gradientLayer = CAGradientLayer()
+        gradientLayer?.frame = bounds
+        gradientLayer?.startPoint = startPoint
+        gradientLayer?.endPoint = endPoint
+        gradientLayer?.colors = colors
+        if let gradientLayer = self.gradientLayer {
+            layer.insertSublayer(gradientLayer, at: 0)
+        }
     }
 }

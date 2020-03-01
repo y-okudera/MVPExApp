@@ -31,6 +31,11 @@ final class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.view.gradientLayer?.frame = self.view.bounds
+    }
+
     @IBAction private func tappedLoginButton(_ sender: UIButton) {
         let userNameOrMail = userNameOrMailField.text ?? ""
         let password = passwordField.text ?? ""
