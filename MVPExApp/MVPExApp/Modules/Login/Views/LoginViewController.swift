@@ -10,8 +10,16 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
-    @IBOutlet private weak var userNameOrMailField: UITextField!
-    @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet private weak var userNameOrMailField: UITextField! {
+        didSet {
+            userNameOrMailField.delegate = self
+        }
+    }
+    @IBOutlet private weak var passwordField: UITextField! {
+        didSet {
+            passwordField.delegate = self
+        }
+    }
     
     // クラスではなく、プロトコルを指定
     var presenter: LoginPresentable!
@@ -59,5 +67,17 @@ extension LoginViewController: LoginView {
             alert.addAction(.init(title: "OK", style: .default))
             self?.present(alert, animated: true)
         }
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if ObjectIdentifier(textField) == ObjectIdentifier(userNameOrMailField) {
+            passwordField.becomeFirstResponder()
+        } else if ObjectIdentifier(textField) == ObjectIdentifier(passwordField) {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }
